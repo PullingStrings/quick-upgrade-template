@@ -1,0 +1,38 @@
+{
+  "businessName": "Café Aroma",
+  "siteTitle": "Café Aroma - Brewed to Perfection",
+  "tagline": "Experience the perfect blend of tradition and passion.",
+  "heroImage": "/src/assets/images/cafe-hero.jpg",
+  "primaryColor": "#6B4F4F",
+  "secondaryColor": "#E8C547",
+  "about": {
+    "text": "Founded in 2010, Café Aroma has been a cornerstone of the community, offering ethically sourced beans and artisanal pastries in a cozy, welcoming atmosphere. Our mission is to provide a perfect cup of coffee and a moment of peace in your busy day.",
+    "image": "/src/assets/images/cafe-about.jpg"
+  },
+  "services": [
+    {
+      "title": "Artisanal Coffee",
+      "description": "Expertly brewed espresso, lattes, and pour-overs from single-origin beans."
+    },
+    {
+      "title": "Fresh Pastries",
+      "description": "Daily-baked croissants, muffins, and cakes to complement your drink."
+    },
+    {
+      "title": "Cozy Atmosphere",
+      "description": "A perfect spot to work, meet friends, or simply relax with a good book."
+    }
+  ],
+  "contact": {
+    "title": "Get In Touch",
+    "description": "We'd love to hear from you. Reach out with any questions or to start your next project.",
+    "email": "hello@cafearoma.com",
+    "phone": "0123-456-7890",
+    "ctaText": "Send Us an Email",
+    "bgColor": "#000"
+  },
+  "socials": {
+    "instagram": "https://instagram.com",
+    "facebook": "https://facebook.com"
+  }
+}
