@@ -28,7 +28,7 @@ function App() {
           <Hero config={config} />
           <About config={config.about} />
           <Services config={config.services} />
-          <Contact config={config.contact} />
+          <Contact config={{ ...config.contact, socials: config.socials }} />
         </main>
       </div>
     </>
