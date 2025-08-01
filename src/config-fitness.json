@@ -1,35 +1,34 @@
 {
-  "businessName": "Café Aroma",
-  "siteTitle": "Café Aroma - Brewed to Perfection",
-  "tagline": "Experience the perfect blend of tradition and passion.",
-  "heroImage": "/src/assets/images/cafe-hero.jpg",
-  "primaryColor": "#6B4F4F",
-  "secondaryColor": "#E8C547",
+  "businessName": "Zenith Fitness",
+  "siteTitle": "Zenith Fitness - Reach Your Peak Performance",
+  "tagline": "Personalized training programs to help you achieve your goals.",
+  "heroImage": "/src/assets/images/fitness-hero.jpg",
+  "primaryColor": "#1A202C",
+  "secondaryColor": "#A7F3D0",
   "about": {
-    "text": "Founded in 2010, Café Aroma has been a cornerstone of the community, offering ethically sourced beans and artisanal pastries in a cozy, welcoming atmosphere. Our mission is to provide a perfect cup of coffee and a moment of peace in your busy day.",
-    "image": "/src/assets/images/cafe-about.jpg"
+    "text": "At Zenith Fitness, we believe that a healthy lifestyle is the foundation for success in every area of life. Our certified trainers are dedicated to creating personalized workout and nutrition plans that are effective, sustainable, and designed just for you.",
+    "image": "/src/assets/images/fitness-about.jpg"
   },
   "services": [
     {
-      "title": "Artisanal Coffee",
-      "description": "Expertly brewed espresso, lattes, and pour-overs from single-origin beans."
+      "title": "1-on-1 Personal Training",
+      "description": "Get dedicated, in-person coaching tailored to your specific fitness level and goals."
     },
     {
-      "title": "Fresh Pastries",
-      "description": "Daily-baked croissants, muffins, and cakes to complement your drink."
+      "title": "Custom Nutrition Plans",
+      "description": "Fuel your body for success with a comprehensive nutrition guide designed to complement your training."
     },
     {
-      "title": "Cozy Atmosphere",
-      "description": "A perfect spot to work, meet friends, or simply relax with a good book."
+      "title": "Online Coaching",
+      "description": "Access our expert training programs from anywhere in the world with our flexible online platform."
     }
   ],
   "contact": {
-    "title": "Get In Touch",
-    "description": "We'd love to hear from you. Reach out with any questions or to start your next project.",
-    "email": "hello@cafearoma.com",
-    "phone": "0123-456-7890",
-    "ctaText": "Send Us an Email",
-    "bgColor": "#000"
+    "title": "Start Your Journey",
+    "description": "Ready to take the first step towards a healthier, stronger you? Contact us today to schedule a free consultation.",
+    "email": "contact@zenith.fit",
+    "phone": "0204-567-8901",
+    "ctaText": "Book a Free Consultation"
   },
   "socials": {
     "instagram": "https://instagram.com",

@@ -2,12 +2,12 @@
   "businessName": "Café Aroma",
   "siteTitle": "Café Aroma - Brewed to Perfection",
   "tagline": "Experience the perfect blend of tradition and passion.",
-  "heroImage": "/src/assets/images/cafe-hero.jpg",
+  "heroImage": "/assets/images/cafe-hero.jpg",
   "primaryColor": "#6B4F4F",
   "secondaryColor": "#E8C547",
   "about": {
     "text": "Founded in 2010, Café Aroma has been a cornerstone of the community, offering ethically sourced beans and artisanal pastries in a cozy, welcoming atmosphere. Our mission is to provide a perfect cup of coffee and a moment of peace in your busy day.",
-    "image": "/src/assets/images/cafe-about.jpg"
+    "image": "/assets/images/cafe-about.jpg"
   },
   "services": [
     {
