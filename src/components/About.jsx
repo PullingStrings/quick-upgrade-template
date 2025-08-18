@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const About = ({ config }) => {
   return (
-    <motion.section
+    <Motion.section
       id="about"
       className="py-20 bg-gray-50"
       initial={{ opacity: 0, y: 50 }}
@@ -30,7 +30,7 @@ const About = ({ config }) => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const Header = ({ config }) => {
   const navLinks = [
@@ -9,7 +9,7 @@ const Header = ({ config }) => {
   ];
 
   return (
-    <motion.header
+    <Motion.header
       className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-sm shadow-md"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -39,7 +39,7 @@ const Header = ({ config }) => {
           ))}
         </nav>
       </div>
-    </motion.header>
+    </Motion.header>
   );
 };
 
