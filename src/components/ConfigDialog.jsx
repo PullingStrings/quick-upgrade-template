@@ -67,13 +67,84 @@ function ConfigDialog({ open, onClose, config, onSave }) {
       <div className="bg-white p-4 rounded w-full max-w-lg max-h-[90vh] overflow-auto">
         <h2 className="text-xl mb-4">Edit Configuration</h2>
         <form onSubmit={handleSubmit} className="space-y-2">
-          <input name="siteTitle" value={form.siteTitle} onChange={handleChange} placeholder="Site Title" className="border p-2 w-full" />
-          <input name="primaryColor" value={form.primaryColor} onChange={handleChange} placeholder="Primary Color" className="border p-2 w-full" />
-          <input name="secondaryColor" value={form.secondaryColor} onChange={handleChange} placeholder="Secondary Color" className="border p-2 w-full" />
-          <textarea name="aboutText" value={form.aboutText} onChange={handleChange} placeholder="About Text" className="border p-2 w-full" />
-          <textarea name="services" value={form.services} onChange={handleChange} placeholder="Services JSON" className="border p-2 w-full" rows={4} />
-          <input name="contactEmail" value={form.contactEmail} onChange={handleChange} placeholder="Contact Email" className="border p-2 w-full" />
-          <input name="contactPhone" value={form.contactPhone} onChange={handleChange} placeholder="Contact Phone" className="border p-2 w-full" />
+          <label className="block">
+            <span className="text-sm">Site Title</span>
+            <input
+              id="siteTitle"
+              name="siteTitle"
+              value={form.siteTitle}
+              onChange={handleChange}
+              placeholder="Site Title"
+              className="border p-2 w-full"
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">Primary Color</span>
+            <input
+              id="primaryColor"
+              name="primaryColor"
+              value={form.primaryColor}
+              onChange={handleChange}
+              placeholder="Primary Color"
+              className="border p-2 w-full"
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">Secondary Color</span>
+            <input
+              id="secondaryColor"
+              name="secondaryColor"
+              value={form.secondaryColor}
+              onChange={handleChange}
+              placeholder="Secondary Color"
+              className="border p-2 w-full"
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">About Text</span>
+            <textarea
+              id="aboutText"
+              name="aboutText"
+              value={form.aboutText}
+              onChange={handleChange}
+              placeholder="About Text"
+              className="border p-2 w-full"
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">Services JSON</span>
+            <textarea
+              id="services"
+              name="services"
+              value={form.services}
+              onChange={handleChange}
+              placeholder="Services JSON"
+              className="border p-2 w-full"
+              rows={4}
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">Contact Email</span>
+            <input
+              id="contactEmail"
+              name="contactEmail"
+              value={form.contactEmail}
+              onChange={handleChange}
+              placeholder="Contact Email"
+              className="border p-2 w-full"
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">Contact Phone</span>
+            <input
+              id="contactPhone"
+              name="contactPhone"
+              value={form.contactPhone}
+              onChange={handleChange}
+              placeholder="Contact Phone"
+              className="border p-2 w-full"
+            />
+          </label>
           {error && <p className="text-red-500 text-sm">{error}</p>}
           <div className="flex justify-end gap-2 pt-2">
             <button type="button" onClick={onClose} className="px-3 py-1 border rounded">Cancel</button>
