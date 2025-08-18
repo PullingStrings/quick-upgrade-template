@@ -6,6 +6,7 @@ import About from './components/About';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import ConfigDialog from './components/ConfigDialog';
+import Footer from './components/Footer';
 import '../index.css'; // Import global styles
 import initialConfig from './config.json';
 
@@ -49,6 +50,7 @@ function App() {
           <Services config={config.services} />
           <Contact config={{ ...config.contact, socials: config.socials }} />
         </main>
+        <Footer config={config} />
         <button
           onClick={() => setOpen(true)}
           className="fixed bottom-4 right-4 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg"
