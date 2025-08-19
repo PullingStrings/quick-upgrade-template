@@ -1,12 +1,34 @@
-# React + Vite
+# Quick Upgrade Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository showcases a simple React + Vite landing page that can be configured on the fly. It renders a header, hero, about, services, contact section, and footer, all styled with Tailwind CSS. A floating "+" button opens a configuration dialog where you can change the site title, brand colors, and section content. Settings are saved in your browser's local storage.
 
-Currently, two official plugins are available:
+> **Note:** This project is for illustration purposes only.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What We've Done
 
-## Expanding the ESLint configuration
+- Scaffolded a React application using Vite.
+- Implemented modular components for each page section.
+- Added a runtime configuration dialog with persistence to `localStorage`.
+- Included basic tests and linting to ensure code quality.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. **Install dependencies**
+   ```bash
+   yarn install
+   ```
+2. **Start the development server**
+   ```bash
+   yarn dev
+   ```
+   Then open [http://localhost:5173](http://localhost:5173) in your browser.
+3. **Customize the page**
+   Click the floating "+" button to open the configuration dialog. Update the fields and save to apply your changes.
+
+## Available Scripts
+
+- `yarn dev` – start a development server with hot reloading.
+- `yarn build` – produce an optimized production build.
+- `yarn lint` – run ESLint across the project.
+- `yarn test` – execute component tests.
+
