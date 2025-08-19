@@ -1,5 +1,5 @@
 // src/components/Contact.jsx
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import { FiMail, FiPhone, FiInstagram, FiFacebook } from 'react-icons/fi';
 
 const Contact = ({ config }) => {
@@ -8,7 +8,7 @@ const Contact = ({ config }) => {
   const { socials } = config; // Assuming socials might be passed separately or within contact
 
   return (
-    <motion.section
+    <Motion.section
       id="contact"
       style={{
        background: bgColor
@@ -52,7 +52,7 @@ const Contact = ({ config }) => {
           {ctaText}
         </a>
       </div>
-    </motion.section>
+    </Motion.section>
   );
 };
 
