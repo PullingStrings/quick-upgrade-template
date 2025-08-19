@@ -83,7 +83,7 @@ function ConfigDialog({ open, onClose, config, onSave }) {
         `https://api.unsplash.com/photos/random?orientation=landscape&client_id=${accessKey}`
       );
       const data = await res.json();
-      const url = data?.urls?.regular;
+      const url = data?.urls?.full;
       if (url) {
         setForm((prev) => ({ ...prev, heroImage: url }));
       } else {
@@ -134,6 +134,7 @@ function ConfigDialog({ open, onClose, config, onSave }) {
                 placeholder="Hero Image URL"
                 className="border p-2 w-full"
               />
+
               <button
                 type="button"
                 onClick={fetchHeroImage}
@@ -142,6 +143,7 @@ function ConfigDialog({ open, onClose, config, onSave }) {
                 Random Hero Image
               </button>
             </div>
+            <p className="text-sm text-gray-500">Type `/assets/images/cafe-hero.jpg` for default image</p>
           </label>
           <label className="block">
             <span className="text-sm">Primary Color</span>
