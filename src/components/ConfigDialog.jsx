@@ -3,10 +3,13 @@ import { useState, useEffect } from 'react';
 function ConfigDialog({ open, onClose, config, onSave }) {
   const [form, setForm] = useState({
     siteTitle: '',
+    tagline: '',
+    heroImage: '',
     primaryColor: '',
     secondaryColor: '',
     aboutText: '',
     services: '[]',
+    socials: '{}',
     contactEmail: '',
     contactPhone: ''
   });
@@ -16,10 +19,13 @@ function ConfigDialog({ open, onClose, config, onSave }) {
     if (open) {
       setForm({
         siteTitle: config.siteTitle || '',
+        tagline: config.tagline || '',
+        heroImage: config.heroImage || '',
         primaryColor: config.primaryColor || '',
         secondaryColor: config.secondaryColor || '',
         aboutText: config.about?.text || '',
         services: JSON.stringify(config.services || [], null, 2),
+        socials: JSON.stringify(config.socials || {}, null, 2),
         contactEmail: config.contact?.email || '',
         contactPhone: config.contact?.phone || ''
       });
@@ -34,6 +40,7 @@ function ConfigDialog({ open, onClose, config, onSave }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     let services;
+    let socials;
     try {
       services = JSON.parse(form.services);
     } catch {
@@ -41,13 +48,22 @@ function ConfigDialog({ open, onClose, config, onSave }) {
       return;
     }
     try {
+      socials = JSON.parse(form.socials);
+    } catch {
+      setError('Socials must be valid JSON');
+      return;
+    }
+    try {
       const newConfig = {
         ...config,
         siteTitle: form.siteTitle,
+        tagline: form.tagline,
+        heroImage: form.heroImage,
         primaryColor: form.primaryColor,
         secondaryColor: form.secondaryColor,
         about: { ...(config.about || {}), text: form.aboutText },
         services,
+        socials,
         contact: {
           ...(config.contact || {}),
           email: form.contactEmail,
@@ -57,6 +73,24 @@ function ConfigDialog({ open, onClose, config, onSave }) {
       onSave(newConfig);
     } catch {
       setError('Failed to save configuration');
+    }
+  };
+
+  const fetchHeroImage = async () => {
+    const accessKey = import.meta.env.VITE_UNSPLASH_ACCESS_KEY || 'UNSPLASH_ACCESS_KEY';
+    try {
+      const res = await fetch(
+        `https://api.unsplash.com/photos/random?orientation=landscape&client_id=${accessKey}`
+      );
+      const data = await res.json();
+      const url = data?.urls?.regular;
+      if (url) {
+        setForm((prev) => ({ ...prev, heroImage: url }));
+      } else {
+        setError('Failed to fetch hero image');
+      }
+    } catch {
+      setError('Failed to fetch hero image');
     }
   };
 
@@ -77,6 +111,37 @@ function ConfigDialog({ open, onClose, config, onSave }) {
               placeholder="Site Title"
               className="border p-2 w-full"
             />
+          </label>
+          <label className="block">
+            <span className="text-sm">Tagline</span>
+            <input
+              id="tagline"
+              name="tagline"
+              value={form.tagline}
+              onChange={handleChange}
+              placeholder="Tagline"
+              className="border p-2 w-full"
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">Hero Image URL</span>
+            <div className="flex gap-2">
+              <input
+                id="heroImage"
+                name="heroImage"
+                value={form.heroImage}
+                onChange={handleChange}
+                placeholder="Hero Image URL"
+                className="border p-2 w-full"
+              />
+              <button
+                type="button"
+                onClick={fetchHeroImage}
+                className="px-2 py-1 bg-gray-200 rounded"
+              >
+                Random Hero Image
+              </button>
+            </div>
           </label>
           <label className="block">
             <span className="text-sm">Primary Color</span>
@@ -119,6 +184,18 @@ function ConfigDialog({ open, onClose, config, onSave }) {
               value={form.services}
               onChange={handleChange}
               placeholder="Services JSON"
+              className="border p-2 w-full"
+              rows={4}
+            />
+          </label>
+          <label className="block">
+            <span className="text-sm">Socials JSON</span>
+            <textarea
+              id="socials"
+              name="socials"
+              value={form.socials}
+              onChange={handleChange}
+              placeholder="Socials JSON"
               className="border p-2 w-full"
               rows={4}
             />
